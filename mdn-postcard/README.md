@@ -1,0 +1,2 @@
+# MDN Postcard
+A simple HTML/CSS postcard form from [MDN](https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms). This is a code-along tutorial intended to practice styling form elements.
