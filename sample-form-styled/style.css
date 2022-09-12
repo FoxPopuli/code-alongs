@@ -2,7 +2,6 @@
     --border-color: #D9D9DC;
     --invalid-color: #D55C5F;
     --form-padding: 50px;
-    --col-width: 120px;
 }
 
 * {
@@ -124,6 +123,7 @@ body {
     margin-bottom: 10px;
     padding: 7px;
     resize: none;
+    width: 100%;
 }
 
 .form-row .instructions {
@@ -132,6 +132,28 @@ body {
     margin-bottom: 30px;
 }
 
+.form-row .checkbox-label {
+    margin-bottom: 0;
+}
+
+.form-row button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5995DA;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.form-row button:hover {
+    background-color: #76AEED;
+}
+
+.form-row button:active {
+    background-color: #407FC7;
+}
 
 @media only screen and (min-width: 700px) {
     /* Desktop layout */
@@ -171,7 +193,21 @@ body {
         float: left;
     }
 
-    .form-row select {
+    .form-row select,
+    .form-row textarea {
         width: 250px;
+    }
+
+    .form-row .instructions {
+        margin-left: 120px;
+    }
+
+    .form-row .checkbox-label {
+        margin-left: 120px;
+        width: auto;
+    }
+
+    .form-row button {
+        margin-left: 120px;
     }
 }
