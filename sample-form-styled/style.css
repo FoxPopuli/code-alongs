@@ -2,6 +2,7 @@
     --border-color: #D9D9DC;
     --invalid-color: #D55C5F;
     --form-padding: 50px;
+    --col-width: 120px;
 }
 
 * {
@@ -31,7 +32,6 @@ body {
     width: 80%;
     margin: 40px 0;
     padding: var(--form-padding);
-    flex:0
 }
 
 .speaker-form-header h1 {
@@ -100,6 +100,12 @@ body {
 .legacy-form-row .radio-label, 
 .legacy-form-row input[type='radio'] {
     float: left;
+}
+
+.legacy-container {
+    /* padding: 20px; */
+    display: flex;
+    width: 100%;
 }
 
 .form-row select {
