@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Sample Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="heading-container">
+    <header class="speaker-form-header">
         <h1>Speaker Submission</h1>
-        <p>Want to speak at our fake conference?<br>Fill out this form</p>
+        <p><em>Want to speak at our fake conference? Fill out this form</em></p>
+    </header>
+    <form action="" method="get" class="speaker-form">
+        <div class="form-row">
+            <label for="fullname">Name</label>
+            <input type="text" name="fullname" id="fullname" placeholder="John Appleseed">
+        </div>
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="joe@example.com">
+        </div>
+        <div class="legacy-form-row">
+            <fieldset class="legacy-form-row">
+                <legend>Type of Talk</legend>
 
-        <form action="" method="post">
-            <ul>
-                <li>
-                    <label for="user-name">Name</label>
-                    <input type="text" name="username" id="user-name">
-                </li>
-                <li>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </li>
-                <li>
-                    <label for="talktypes">Types of Talk</label>
-                    <input type="radio" name="talktypes" id="talktypes">
-                </li>
-                <li>
-                    <label for="shirt-size">T-shit size</label>
-                    <select name="shirt-size" id="shirt-size">
-                        <option value="ex-small">Extra Small</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="ex-medium">Extra Medium</option>
-                        <option value="large">Large</option>
-                        <option value="ex-large">Extra Large</option>
-                    </select>
-                </li>
-                <li></li>
-            </ul>
-        </form>
-    </div>
+                <input type="radio" name="talk-type" id="talk-type-1" value="main-stage">
+                <label for="talk-type-1" class="radio-label">Main stage</label>
+
+                <input type="radio" name="talk-type" id="talk-type-2" value="workshop" checked>
+                <label for="talk-type-2" class="radio-label">Workshop</label>
+            </fieldset>
+        </div>
+
+        <div class="form-row">
+            <label for="t-shirt">T-Shirt Size</label>
+            <select name="t-shirt" id="t-shirt">
+                <option value="xs">Extra Small</option>
+                <option value="s">Small</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="abstract">Abstract</label>
+            <textarea name="abstract" id="abstract" cols="30" rows="10"></textarea>
+            <div class="instructions">Descibe your talk in 500 words or less</div>
+        </div>
+    </form>
 </body>
 </html>
